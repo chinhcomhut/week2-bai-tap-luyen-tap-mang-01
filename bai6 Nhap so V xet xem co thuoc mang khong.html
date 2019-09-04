@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai6 Xét 1 số nguyên V có thuộc mảng hay không</title>
+</head>
+<body>
+
+</body>
+<script>
+    let arr = new Array();
+    let n = prompt("Enter the lenght of array :"); //Trong bài này n = 10 phần tử, ở đây ta viết bài tổng quát//
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("Enter the elements :" + i));
+    }
+    document.write("array: " + arr + "<br")
+    let v = parseInt(prompt("Enter v:"));
+    let check;
+    for (let i = 0; i < n; i++) {
+        if (arr[i] === v) {
+            check = true;
+        }
+    }
+    if (check == true) {
+        //alert("is in the array")
+        document.write("is in the array");
+    } else {
+        //alert("ko thuoc")
+        document.write(" is not in the array");
+    }
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sắp xếp mảng theo thứ tự giảm dần</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("Enter the length of array:")); //in this case n=10)
+    let arr = new Array();
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("Enter the element" + i));
+    }
+    document.write("array before reversing: " + arr+"<br>")
+    let temp;
+    for (i = 0; i < arr.length; i++) {
+        for (j=i+1; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp
+            }
+        }
+    }
+    document.write("array after reversing: " + arr)
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối 2 mảng với nhau</title>
+</head>
+<body>
+<script>
+    let arrA= new Array();
+    let n=parseInt(prompt("Enter the length of array A: ")); //we write general problems for many elements. This problem only requires 10 elements//
+    for(let i=0;i<n;i++){
+        arrA[i]=parseInt(prompt("Enter the elements of array A: "+i));
+    }
+    document.write("Array A: "+arrA+" <br>")
+    let arrB=new Array();
+    let m=parseInt(prompt("Enter the length of array B: "));
+    for(i=0;i<m;i++){
+        arrB[i]=parseInt(prompt("Enter the elements of array B: "+i));
+    }
+    document.write("Array B:"+arrB+"<br>")
+let arrC=arrA.concat(arrB);
+    document.write("Array C: "+arrC)
+</script>
+</body>
+</html>

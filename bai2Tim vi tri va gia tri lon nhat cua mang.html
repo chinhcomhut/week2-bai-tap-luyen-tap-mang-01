@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 Tìm phần tử lớn nhất trong mảng hiển thị phần tử và vị trí</title>
+</head>
+<body>
+<script>
+    let arr = new Array();
+    let n = parseInt(prompt("Enter the length of array: "));
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("Enter the elements of array: " + i));
+    }
+    document.write("Array: " + arr + "<br>")
+    let max = arr[0], potion;
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            potion = i;
+        }
+    }
+    document.write("The largest value in the array is: " +max+ " at the potion: " +potion)
+</script>
+</body>
+</html>

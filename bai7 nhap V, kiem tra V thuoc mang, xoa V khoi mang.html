@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập V xóa V khỏi mảng </title>
+</head>
+<body>
+<script>
+    let arr = new Array();
+    let i;
+    let n = parseInt(prompt("Enter the length of array:"));
+    for (i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("Enter the element:" + i));
+    }
+    document.write("Array: " + arr + "<br>")
+    let posion;
+    let check = false;
+    let v = parseInt(prompt("Enter a number v:"));
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] === v) {
+            check = true;
+            posion = i;
+        }
+    }
+    //console.log(check)
+    if (check) {
+        document.write(v + ": is in array" + '<br>');
+        arr.splice(posion, 1);
+        arr.push('0');
+        document.write("array after deleted element: " + v + " is: " + arr)
+    } else {
+        document.write(v + ": is not in array")
+    }
+
+
+    // if (b == index++) {
+    //     for (i = 0; i < arr.length; i++) {
+    //         b = arr.indexOf(xoa);
+    //         arr.splice(b, 1);
+    //     }
+
+    // document.write(arr[i])
+</script>
+</body>
+</html>
